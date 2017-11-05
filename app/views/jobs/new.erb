@@ -1,0 +1,32 @@
+<div class="container">
+<div class="row">
+  <div class="col m6">
+    <div class="card new-job">
+      <h3 class="card-header">Add a Job</h3>
+      <div class-"card-text">
+      <%= bootstrap_form_for(@job) do |f| %>
+      <% if @job.errors.any? %>
+      <h3><%= pluralize(@job.errors.count, "error") %> prohibited this record from being saved:</h3>
+      <ul>
+        <% @job.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+      <%= f.text_field :company, placeholder: "Company" %>
+      <%= f.text_field :title, placeholder: "Title" %>
+      <%= f.text_field :city, placeholder: "City" %>
+      <%= f.text_field :state, placeholder: "State" %>
+      <%= f.text_field :salary, placeholder: "Salary" %>
+      <%= f.text_field :post_url, placeholder: "Link To Job" %>
+      <%= f.collection_select :status_id, @statuses, :id, :name %>
+
+      <%= f.submit "Add Job", class: "btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+</div>

@@ -6,5 +6,6 @@ FactoryBot.define do
     sequence(:state) {|n| "#{n}#{Faker::Address.state}"}
     salary (75000..10000).to_a.sample
     association :user
+    association :status
   end
 end

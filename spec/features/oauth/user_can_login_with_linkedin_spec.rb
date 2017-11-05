@@ -5,7 +5,7 @@ feature "As a visitor" do
     scenario "I should be able to click 'login with linkedin' and login" do
       visit '/'
       mock_auth_hash
-      click_on("Login with Linkedin")
+      click_on "Login with LinkedIn"
 
       expect(current_path).to eq('/dashboard')
       expect(page).to have_content("Test")
@@ -13,7 +13,8 @@ feature "As a visitor" do
     scenario "it can handle an auth error" do
       OmniAuth.config.mock_auth[:linkedin] = :invalid_credentials
       visit '/'
-      click_on("Login with Linkedin")
+      click_on "Login with LinkedIn"
+      
       expect(current_path).to eq('/auth/failure')
     end
   end
