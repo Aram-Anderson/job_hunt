@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    @user = current_user
+    @jobs = current_user.jobs
   end
 end

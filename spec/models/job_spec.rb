@@ -9,6 +9,7 @@ RSpec.describe Job, type: :model do
     expect(job).to respond_to(:state)
     expect(job).to respond_to(:salary)
     expect(job).to respond_to(:user)
+    expect(job).to respond_to(:location)
   end
   it { should belong_to(:user) }
 end
