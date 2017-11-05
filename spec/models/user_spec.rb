@@ -9,6 +9,6 @@ RSpec.describe User, type: :model do
     expect(user).to respond_to(:name)
     expect(user).to respond_to(:email)
     expect(user).to respond_to(:image_url)
-
   end
+  it { should have_many(:jobs) }
 end
