@@ -1,3 +1,22 @@
-<h1>Dashboard</h1>
-
-<%= @user.name %>
+<h1><center><%= current_user.first_name %>'s Dashboard</center></h1>
+<table class="bordered highlight">
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Job Title</th>
+      <th>Location</th>
+      <th>Salary</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @jobs.each do |job| %>
+    <tbody>
+      <td><a><%= job.company %></a></td>
+      <td><%= job.title %></td>
+      <td><%= job.location %></td>
+      <td><%= number_to_currency(job.salary) %></td>
+      <td><%= job.status.name %></td>
+    </tbody>
+  <% end %>
+</table>

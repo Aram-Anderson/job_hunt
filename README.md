@@ -1,24 +1,24 @@
-# README
+### Job Search
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Pitch
 
-Things you may want to cover:
+This app will be a clear and easy way for a job searcher to track their applied jobs, need to apply jobs, and create a checklist for applications. It will also bring in the LinkedIn API for recommended jobs.
 
-* Ruby version
+### Problem
 
-* System dependencies
+There is a lot that goes into a job search, and it would be easier with clear and concise way to track that process from end to end.
 
-* Configuration
+### Solution
 
-* Database creation
+This app will allow a user to add jobs, create application checklists for those jobs, save contacts at specific jobs, create notes about the jobs, and track progress as they move through the application process.
 
-* Database initialization
+### Target Audience
 
-* How to run the test suite
+Job seekers who are looking for a way to spend less time on the logistics of job hunting.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Integrations
 
-* Deployment instructions
-
-* ...
+ * Which APIs will you use?
+  * The LinkedIn API for job recommendations, as well as building out rails as an API only backend and displaying the frontend using React making calls to that API.
+ * Which OAuth integration are you planning to use?
+  * LinkedIn.
