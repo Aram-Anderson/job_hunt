@@ -16,14 +16,15 @@ DatabaseCleaner.strategy = :truncation
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-    config.before(:each) do
-      DatabaseCleaner.clean
-    end
-    config.after(:each) do
-      DatabaseCleaner.clean
-    end
+  config.before(:each) do
+    DatabaseCleaner.clean
+  end
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 
   config.include FactoryBot::Syntax::Methods
+
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

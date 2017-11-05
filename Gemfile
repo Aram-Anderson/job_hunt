@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'materialize-sass'
 gem 'turbolinks'
 gem 'jquery-rails'
 gem 'omniauth'
@@ -36,7 +36,6 @@ group :development, :test do
   gem 'pry'
   gem 'shoulda-matchers'
   gem 'launchy'
-  gem 'factory_girl'
   gem 'simplecov'
 end
 

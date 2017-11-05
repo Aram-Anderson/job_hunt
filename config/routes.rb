@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
-  get '/auth/:provider/callback', to: 'oauth#callback', as: 'oauth_callback'
-  get '/auth/failure', to: 'oauth#failure', as: 'oauth_failure'
+
+  root 'sessions#new'
+
+  get "/login"          => "sessions#new"
+  post "/login"         => "sessions#create"
+  delete "/logout"      => "sessions#destroy"
+  get '/auth/:provider/callback', to: 'sessions#create'
+
+  resources :dashboard, only: [:index]
+
 end
