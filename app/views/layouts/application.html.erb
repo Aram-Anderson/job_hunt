@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>JobHunt</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>JobHunt</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script>
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+  </script>
+</head>
 
-  <body>
-    <% flash.each do |name, msg| %>
-    <div class="transparent-white"><%= content_tag :div, sanitize(msg), class: name %></div>
-    <% end %>
-    <%= yield %>
-  </body>
+<body>
+  <% flash.each do |name, msg| %>
+  <div class="transparent-white"><%= content_tag :div, sanitize(msg), class: name %></div>
+  <% end %>
+  <%= yield %>
+</body>
 </html>
