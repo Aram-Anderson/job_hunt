@@ -13,12 +13,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'materialize-sass'
+gem 'turbolinks'
 gem 'jquery-rails'
-gem 'friendly_id', '~> 5.1.0'
-gem "paperclip", "~> 5.0.0"
 gem 'omniauth'
-gem 'omniauth-linkedin'
+gem 'omniauth-linkedin-oauth2', git: 'https://github.com/Devato/omniauth-linkedin-oauth2.git'
 gem 'chart-js-rails'
 gem 'figaro'
 gem 'active_model_serializers'
@@ -37,7 +36,6 @@ group :development, :test do
   gem 'pry'
   gem 'shoulda-matchers'
   gem 'launchy'
-  gem 'factory_girl'
   gem 'simplecov'
 end
 
