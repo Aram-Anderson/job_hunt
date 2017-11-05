@@ -6,14 +6,12 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <script>
-  $(document).ready(function() {
-    $('select').material_select();
-  });
-  </script>
 </head>
 
 <body>
+  <nav class="navbar sticky-top" style="background-color: #e3f2fd;">
+  <p>JobHunt</p>
+</nav>
   <% flash.each do |name, msg| %>
   <div class="transparent-white"><%= content_tag :div, sanitize(msg), class: name %></div>
   <% end %>

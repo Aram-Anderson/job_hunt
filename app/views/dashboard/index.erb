@@ -1,32 +1,35 @@
 <h1><center><%= current_user.first_name %>'s Dashboard</center></h1>
-<div class="container">
-  <div class="col m11">
+<div class="row">
+<div class="col-1">
+</div>
+  <div class="col-10">
     <div class="card jobs-table">
-<table class="table table-bordered table-hover">
-  <thead class="thead-inverse">
-    <tr>
-      <th>Company</th>
-      <th>Job Title</th>
-      <th>Location</th>
-      <th>Salary</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <% @jobs.each do |job| %>
-    <tbody>
-      <td><a><%= job.company %></a></td>
-      <td><%= job.title %></td>
-      <td><%= job.location %></td>
-      <td><%= number_to_currency(job.salary) %></td>
-      <td><%= job.status.name %></td>
-    </tbody>
-  <% end %>
-</table>
-</div>
-
-
-<%= button_to '/jobs/new', method: 'get', class: "fa fa-plus-square btn-primary" do %>
-<span class="fa-fa-plus-square"></span> Add a Job
-<% end %>
-</div>
+      <table class="table table-bordered table-hover">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Company</th>
+            <th>Job Title</th>
+            <th>Location</th>
+            <th>Salary</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <% @jobs.each do |job| %>
+        <tbody>
+          <td><a><%= job.company %></a></td>
+          <td><%= job.title %></td>
+          <td><%= job.location %></td>
+          <td><%= number_to_currency(job.salary) %></td>
+          <td><%= job.status.name %></td>
+        </tbody>
+        <% end %>
+      </table>
     </div>
+    <%= button_to '/jobs/new', method: 'get', class: "fa fa-plus-square btn-primary" do %>
+    <span class="fa-fa-plus-square"></span> Add a Job
+    <% end %>
+  </div>
+</div>
+<div class="col">
+</div>
+</div>
