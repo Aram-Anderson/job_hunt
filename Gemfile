@@ -26,6 +26,9 @@ gem 'faker'
 gem 'font-awesome-rails'
 gem 'material_icons'
 gem 'bootstrap-social-rails'
+gem 'bootstrap_form'
+
+
 
 
 

@@ -64,6 +64,7 @@ GEM
       sass (>= 3.5.2)
     bootstrap-social-rails (4.12.0)
       railties (>= 3.1)
+    bootstrap_form (2.7.0)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.15.4)
@@ -274,6 +275,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootstrap (~> 4.0.0.beta2.1)
   bootstrap-social-rails
+  bootstrap_form
   byebug
   capybara
   chart-js-rails
