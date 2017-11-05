@@ -5,6 +5,7 @@ class CreateJobs < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :city
       t.string :state
+      t.string :post_url
       t.integer :salary
       t.references :user, foreign_key: true
 
