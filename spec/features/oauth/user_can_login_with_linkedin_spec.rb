@@ -8,7 +8,13 @@ feature "As a visitor" do
       click_on("Login with Linkedin")
 
       expect(current_path).to eq('/dashboard')
-
+      expect(page).to have_content("Test")
+    end
+    scenario "it can handle an auth error" do
+      OmniAuth.config.mock_auth[:linkedin] = :invalid_credentials
+      visit '/'
+      click_on("Login with Linkedin")
+      expect(current_path).to eq('/auth/failure')
     end
   end
 end

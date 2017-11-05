@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <% flash.each do |name, msg| %>
+    <div class="transparent-white"><%= content_tag :div, sanitize(msg), class: name %></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
