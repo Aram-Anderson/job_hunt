@@ -18,7 +18,7 @@
         <% @jobs.each do |job| %>
         <tbody>
           <tr>
-          <td><%= link_to job.company, job_path(job) %></td>
+          <td><%= link_to job.company, company_path(job) %></td>
           <td><%= job.title %></td>
           <td><%= job.location %></td>
           <td><%= number_to_currency(job.salary) %></td>

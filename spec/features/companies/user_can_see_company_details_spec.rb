@@ -11,7 +11,14 @@ feature "As a logged in user" do
         click_on("Workiva")
 
         expect(page).to have_content("Overall Company Rating")
-        expect(page).to have_content("3.6")
+        expect(page).to have_content("3.6 out of 5 with 198 total ratings")
+        expect(page).to have_content("4.0 out of 5")
+        expect(page).to have_content("3.4 out of 5")
+        expect(page).to have_content("3.4 out of 5")
+        expect(page).to have_content("3.2 out of 5")
+        expect(page).to have_content("4.0 out of 5")
+        expect(page).to have_content("I've worked for several companies since Workiva and Workiva was more pro than con. I genuinely thought about going back several times. Healthcare, benefits, people are all really good. This company has good morals")
+
       end
     end
   end
