@@ -15,8 +15,8 @@ feature "As a logged in user" do
       fill_in "job[post_url]", with: "job.com"
       fill_in "job[salary]", with: "50000"
       select("interested", from: "job[status_id]").select_option
-      
-      click_on "Create Job"
+
+      click_on "Add Job"
 
       expect(current_path).to eq('/dashboard')
       expect(page).to have_content('Company1')

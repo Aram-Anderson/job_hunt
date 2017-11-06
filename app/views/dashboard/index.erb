@@ -14,14 +14,18 @@
             <th>Status</th>
           </tr>
         </thead>
+        <% if @jobs %>
         <% @jobs.each do |job| %>
         <tbody>
-          <td><a><%= job.company %></a></td>
+          <tr>
+          <td><%= link_to job.company, job_path(job) %></td>
           <td><%= job.title %></td>
           <td><%= job.location %></td>
           <td><%= number_to_currency(job.salary) %></td>
           <td><%= job.status.name %></td>
+        </tr>
         </tbody>
+        <% end %>
         <% end %>
       </table>
     </div>
