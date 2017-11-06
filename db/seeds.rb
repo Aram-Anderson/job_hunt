@@ -1,5 +1,8 @@
 # You must first rake db:{create,migrate}, then log in to the app via LinkedIn to create a User. The jobs are asscoiated with a specifc user, so they need a user to attach to.
 
+Status.destroy_all
+Job.destroy_all
+
 Status.create([{name: "interested"}, {name: "applied"}, {name: "interviewed"}, {name: "offer"}, {name: "accepted"}])
 
 statuses = Status.all

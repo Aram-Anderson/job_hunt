@@ -22,6 +22,6 @@ class Company
    end
 
    def to_hundred(rating)
-     (rating.to_f / 4) * 100
+     (rating.to_f / 5) * 100
    end
 end

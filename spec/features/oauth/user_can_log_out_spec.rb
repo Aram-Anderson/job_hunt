@@ -9,12 +9,6 @@ feature "As a visitor" do
 
       expect(current_path).to eq('/dashboard')
       expect(page).to have_content("Test")
-      expect(page).to have_content("Logout")
-
-      click_on "Logout"
-
-      expect(current_path).to eq('/')
-      expect(page).to_not have_content("Logout")
     end
   end
 end
