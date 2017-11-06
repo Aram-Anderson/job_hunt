@@ -1,10 +1,85 @@
-<h1>Job Details</h1>
-<%= @job.title %>
-<p><%= @company.name %></p>
-  <p>Overall Company Rating</p>
-  <p><%= @company.overall_rating %> out of 5</p>
+<div class="container">
+<h1>Company Details</h1>
+
+<p><%= @job.title %> at <%= @company.name %></p>
+
+<div class="row">
+    <div class="col-2">
+      <%= image_tag @company.square_logo %>
+    </div>
+    <div class="col-4">
+      <p><%= link_to "website", "https://#{@company.website}" %></p>
+      <p>Industry: <%= @company.industry %></p>
+      <p>Overall, employees are <%= @company.rating_description %> with <%= @company.name %></p>
+    </div>
+    <div class="col-6">
+      <p>Featured Pros</p>
+      <p><%= @company.featured_review_pros %></p><br>
+      <p>Featured Cons</p>
+      <p><%= @company.featured_review_cons %></p>
+    </div>
+</div>
+
+</div>
+
+<div class="card">
+  <div class="container mb-5">
+<div class="row">
+  <div class="col-4">
+  <br><p>Overall Company Rating</p>
+  <p><%= @company.overall_rating %> out of 5 with <%= @company.number_of_ratings %> total ratings</p>
 <div class="progress">
   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= @company.to_hundred(@company.overall_rating) %>"
   aria-valuemin="0" aria-valuemax="5" style="width:<%= @company.to_hundred(@company.overall_rating) %>%">
   </div>
+</div>
+  </div>
+  <div class="col-4">
+    <br><p>Culture and Values</p>
+    <p><%= @company.culture_and_values_rating %> out of 5</p>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= @company.to_hundred(@company.culture_and_values_rating) %>"
+      aria-valuemin="0" aria-valuemax="5" style="width:<%= @company.to_hundred(@company.culture_and_values_rating) %>%">
+  </div>
+  </div>
+</div>
+<div class="col-4">
+  <br><p>Senior Leadership</p>
+  <p><%= @company.senior_leadership_rating %> out of 5</p>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= @company.to_hundred(@company.senior_leadership_rating) %>"
+    aria-valuemin="0" aria-valuemax="5" style="width:<%= @company.to_hundred(@company.senior_leadership_rating) %>%">
+</div>
+</div>
+</div>
+</div><br>
+<div class="row">
+<div class="col-4">
+  <p>Compensation and Benefits</p>
+  <p><%= @company.compensation_and_benefits_rating %> out of 5</p>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= @company.to_hundred(@company.compensation_and_benefits_rating) %>"
+    aria-valuemin="0" aria-valuemax="5" style="width:<%= @company.to_hundred(@company.compensation_and_benefits_rating) %>%">
+</div>
+</div>
+</div>
+  <div class="col-4">
+    <p>Career Opportunities</p>
+    <p><%= @company.career_opportunities_rating %> out of 5</p>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= @company.to_hundred(@company.career_opportunities_rating) %>"
+      aria-valuemin="0" aria-valuemax="5" style="width:<%= @company.to_hundred(@company.career_opportunities_rating) %>%">
+  </div>
+  </div>
+  </div>
+  <div class="col-4">
+    <p>Work Life Balance</p>
+    <p><%= @company.work_life_balance_rating %> out of 5</p>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= @company.to_hundred(@company.work_life_balance_rating) %>"
+      aria-valuemin="0" aria-valuemax="5" style="width:<%= @company.to_hundred(@company.work_life_balance_rating) %>%">
+  </div>
+  </div>
+  </div>
+</div>
 </div>

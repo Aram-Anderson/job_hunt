@@ -10,11 +10,14 @@
 
 <body>
   <nav class="navbar sticky-top nav-style">
-  <%= image_tag 'logo.png', class: "logo-img" %>
-  <% if current_user %>
-<%= link_to "Logout", logout_path, method: :delete, class: "navbar-right" %>
-<% end %>
-</nav>
+    <%= image_tag 'logo.png', class: "logo-img" %>
+    <% if current_user %>
+    <ul class="navbar-right list-inline">
+      <li class="list-inline-item"><%= link_to "Dashboard", dashboard_index_path %></li>
+      <li class="list-inline-item"><%= link_to "Logout", logout_path, method: :delete %></li>
+    </ul>
+    <% end %>
+  </nav>
   <% flash.each do |name, msg| %>
   <div class="transparent-white"><%= content_tag :div, sanitize(msg), class: name %></div>
   <% end %>
