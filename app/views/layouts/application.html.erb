@@ -9,10 +9,10 @@
 </head>
 
 <body>
-  <nav class="navbar sticky-top" style="background-color: #e3f2fd;">
-  <p>JobHunt</p>
+  <nav class="navbar sticky-top nav-style">
+  <%= image_tag 'logo.png', class: "logo-img" %>
   <% if current_user %>
-</p><%= link_to "Logout", logout_path, method: :delete %></p>
+<%= link_to "Logout", logout_path, method: :delete, class: "navbar-right" %>
 <% end %>
 </nav>
   <% flash.each do |name, msg| %>
