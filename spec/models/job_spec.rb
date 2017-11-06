@@ -12,4 +12,9 @@ RSpec.describe Job, type: :model do
     expect(job).to respond_to(:location)
   end
   it { should belong_to(:user) }
+  it { should validate_presence_of(:company) }
+  it { should validate_presence_of(:city) }
+  it { should validate_presence_of(:state) }
+  it { should validate_presence_of(:salary) }
+  it { should validate_presence_of(:title) }
 end

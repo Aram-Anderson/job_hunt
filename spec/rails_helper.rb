@@ -16,6 +16,12 @@ SimpleCov.start 'rails' do
   add_filter '/jobs/'
   add_filter '/helpers/'
 end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/cassettes"
+  config.hook_into :webmock
+  config.allow_http_connections_when_no_cassette = true
+end
 DatabaseCleaner.strategy = :truncation
 
 ActiveRecord::Migration.maintain_test_schema!
