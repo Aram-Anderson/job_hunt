@@ -27,10 +27,7 @@ gem 'font-awesome-rails'
 gem 'material_icons'
 gem 'bootstrap-social-rails'
 gem 'bootstrap_form'
-
-
-
-
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -44,6 +41,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'launchy'
   gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

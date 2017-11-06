@@ -4,7 +4,7 @@ FactoryBot.define do
     sequence(:title) {|n| "#{n}#{Faker::Company.profession}"}
     sequence(:city) {|n| "#{n}#{Faker::Address.city}"}
     sequence(:state) {|n| "#{n}#{Faker::Address.state}"}
-    salary (75000..10000).to_a.sample
+    salary 75000
     association :user
     association :status
   end

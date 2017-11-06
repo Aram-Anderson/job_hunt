@@ -1,0 +1,18 @@
+require 'rails_helper'
+
+feature "As a logged in user" do
+  context "I can click a job on the dashboard page" do
+    scenario "and I can see details about the company from Glassdoor" do
+      VCR.use_cassette("glassdoor company details") do
+        user = create(:user)
+        create(:job, company: "Workiva", user: user)
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+        visit dashboard_index_path
+        click_on("Workiva")
+
+        expect(page).to have_content("Overall Company Rating")
+        expect(page).to have_content("3.6")
+      end
+    end
+  end
+end

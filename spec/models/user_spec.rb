@@ -10,5 +10,9 @@ RSpec.describe User, type: :model do
     expect(user).to respond_to(:email)
     expect(user).to respond_to(:image_url)
   end
+  it "has instance methods" do
+    user = create(:user, first_name: "Bill", last_name: "Smith")
+    expect(user.name).to eq("Bill Smith")
+  end
   it { should have_many(:jobs) }
 end
