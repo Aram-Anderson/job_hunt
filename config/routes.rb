@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get 'auth/failure', to: 'sessions#new'
 
   resources :dashboard, only: [:index]
-  resources :jobs, only: [:new, :create]
+  resources :jobs, only: [:new, :create, :show]
 
 end
