@@ -59,7 +59,7 @@ RSpec.describe Company, type: :model do
 
     company = Company.new(attrs_hash)
 
-    expect(company.to_hundred(company.overall_rating)).to eq(97.5)
+    expect(company.to_hundred(company.overall_rating)).to eq(78.0)
 
   end
 end
