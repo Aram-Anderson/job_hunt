@@ -10,7 +10,12 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'database_cleaner'
 
-SimpleCov.start 'rails'
+SimpleCov.start 'rails' do
+  add_filter '/mailers/'
+  add_filter '/channels/'
+  add_filter '/jobs/'
+  add_filter '/helpers/'
+end
 DatabaseCleaner.strategy = :truncation
 
 ActiveRecord::Migration.maintain_test_schema!
