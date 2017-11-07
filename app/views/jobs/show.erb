@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Job Details</h1>
+
+  <p><%= @job.title %> at <%= @company.name %></p>
+
+  <div class="row">
+    <div class="col-2">
+      <%= image_tag @company.square_logo %>
+    </div>
+    <div class="col-4">
+      <p><%= link_to "website", "https://#{@company.website}" %></p>
+      <p>Industry: <%= @company.industry %></p>
+      <p>Status: <%= @job.status.name %></p>
+    </div>
+    <div class="col-6">
+      <p>Description:</p>
+      <p><%= @job.description %></p><br>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12">
+        <center><p>Analysis of this post has produced these keywords. They can help to write a stronger cover letter:</p></center>
+      </div>
+      <% @keywords.each do |keyword| %>
+      <div class="col-4">
+          <p><%= keyword.word %>, relevance <%= keyword.relevance %></p>
+      </div>
+      <% end %>
+    </div><br>
+  </div>
+</div>
