@@ -20,10 +20,27 @@ class JobsController < ApplicationController
     redirect_to dashboard_index_path
   end
 
-  private
+  def edit
+    @job = current_user.jobs.find(params[:id])
+    @statuses = Status.all
+  end
 
-  def job_params
-    params.require(:job).permit(:company, :title, :city, :state,
-      :salary, :post_url, :status_id)
+  def update
+    job = current_user.jobs.find(params[:id])
+    if job.update(job_params)
+      flash[:notice] = "#{job.title} updated."
+      redirect_to dashboard_index_path
+    else
+      @statuses = Status.all
+      render :edit
     end
   end
+
+
+private
+
+def job_params
+  params.require(:job).permit(:company, :title, :city, :state,
+    :salary, :post_url, :status_id)
+  end
+end

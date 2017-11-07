@@ -8,9 +8,11 @@
       <%= image_tag @company.square_logo %>
     </div>
     <div class="col-4">
-      <p><%= link_to "website", "https://#{@company.website}" %></p>
+      <p><%= link_to "#{@company.name}'s website", "https://#{@company.website}" %></p>
       <p>Industry: <%= @company.industry %></p>
       <p>Status: <%= @job.status.name %></p>
+      <p><%= link_to "Edit Job", edit_job_path(@job) %></p>
+      <p><%= link_to "Delete Job", job_path(@job), method: 'delete' %></p>
     </div>
     <div class="col-6">
       <p>Description:</p>
