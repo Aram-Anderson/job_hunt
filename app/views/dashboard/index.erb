@@ -12,6 +12,7 @@
             <th>Location</th>
             <th>Salary</th>
             <th>Status</th>
+            <th>Details</th>
           </tr>
         </thead>
         <% if @jobs %>
@@ -23,6 +24,7 @@
           <td><%= job.location %></td>
           <td><%= number_to_currency(job.salary) %></td>
           <td><%= job.status.name %></td>
+          <td><%= link_to "Details", job_path(job) %></td>
         </tr>
         </tbody>
         <% end %>

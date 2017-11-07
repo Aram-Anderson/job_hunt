@@ -1,5 +1,11 @@
 class JobsController < ApplicationController
 
+  def show
+    @job = Job.find(params[:id])
+    @keywords = WatsonService.new.get_analysis(@job.description)
+    @company = CompanyService.new.execute(@job.company, request.remote_ip)
+  end
+
   def new
     @job = Job.new
     @statuses = Status.all
@@ -19,5 +25,5 @@ class JobsController < ApplicationController
   def job_params
     params.require(:job).permit(:company, :title, :city, :state,
       :salary, :post_url, :status_id)
+    end
   end
-end

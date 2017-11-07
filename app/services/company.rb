@@ -21,7 +21,7 @@ class Company
      @featured_review_cons  =  create_hash[:featuredReview][:cons]
    end
 
-   def to_hundred(rating)
+   def rating_to_percentage(rating)
      (rating.to_f / 5) * 100
    end
 end

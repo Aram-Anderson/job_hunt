@@ -1,4 +1,4 @@
-.table-trans-white{background-color:rgba(255,255,255,0.7)}.jobs-table{height:20em;background-color:rgba(255,255,255,0.3)}.login-card{margin-top:3em;height:30em;padding-top:27em;padding-left:3em;padding-right:3em}body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:roboto, sans-serif !important}body{background-image:url("geo1.png");background-size:100%}.logo-img{height:3em}.nav-style{background-color:rgba(127,172,244,0.7)}/*!
+.table-trans-white{background-color:rgba(255,255,255,0.7)}.jobs-table{height:100%;background-color:rgba(255,255,255,0.3)}.login-card{margin-top:3em;height:30em;padding-top:6em}.login-text{font-size:4em;font-family:roboto;text-align:center;padding-bottom:0.5em}.login-bar{padding-left:1em;padding-right:1em}body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:roboto, sans-serif !important}body{background-image:url("geo2.jpg");background-size:100%}.logo-img{height:3em}.nav-style{background-color:#00adea}.text-muted{text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000}/*!
  * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
