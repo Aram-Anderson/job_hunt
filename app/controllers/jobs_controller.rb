@@ -36,6 +36,16 @@ class JobsController < ApplicationController
     end
   end
 
+  def destroy
+    job = current_user.jobs.find(params[:id])
+    if job.delete
+      flash[:notice] = "#{job.title} deleted."
+    else
+      flash[:notice] = "Job not deleted.Try again"
+    end
+    redirect_to dashboard_index_path
+  end
+
 
 private
 

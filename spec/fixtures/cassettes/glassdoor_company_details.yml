@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 07 Nov 2017 04:10:02 GMT
+      - Tue, 07 Nov 2017 21:04:48 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -40,15 +40,15 @@ http_interactions:
       Expires:
       - '0'
       Set-Cookie:
-      - ARPNTS=1013295296.36895.0000; expires=Sun, 06-May-2018 04:10:02 GMT; path=/;
+      - ARPNTS=2825234624.36895.0000; expires=Sun, 06-May-2018 21:04:48 GMT; path=/;
         Httponly
-      - ARPNTS_AB=498;Path=/;Expires=Mon, 05-Feb-2018 04:10:02 GMT
-      - GSESSIONID=59184DCA5ECF4BDCA92A7C3AD7531E14; Expires=Tue, 07-Nov-2017 06:10:02
+      - ARPNTS_AB=252;Path=/;Expires=Mon, 05-Feb-2018 21:04:48 GMT
+      - GSESSIONID=B467EEE8F8C8B47D2A3AEA789DCB0706; Expires=Tue, 07-Nov-2017 23:04:48
         GMT; Path=/; Secure
-      - JSESSIONID=59184DCA5ECF4BDCA92A7C3AD7531E14; Path=/; HttpOnly
+      - JSESSIONID=B467EEE8F8C8B47D2A3AEA789DCB0706; Path=/; HttpOnly
       - _uac=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
-      - cass=0; Expires=Tue, 07-Nov-2017 06:10:02 GMT; Path=/; Secure
-      - gdId=f57bde0c-b952-4ba5-8bd8-64f42adb594c; Expires=Fri, 05-Nov-2027 04:10:02
+      - cass=0; Expires=Tue, 07-Nov-2017 23:04:48 GMT; Path=/; Secure
+      - gdId=7850ca17-3e02-46c6-9dd6-50b20e199d0c; Expires=Fri, 05-Nov-2027 21:04:48
         GMT; Path=/
       Content-Language:
       - en-US
@@ -57,14 +57,14 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3b9d70c5e2734fd5-DEN
+      - 3ba33f3c40084fe7-DEN
     body:
       encoding: ASCII-8BIT
       string: |-
         {
           "success": true,
           "status": "OK",
-          "jsessionid": "59184DCA5ECF4BDCA92A7C3AD7531E14",
+          "jsessionid": "B467EEE8F8C8B47D2A3AEA789DCB0706",
           "response": {
             "attributionURL": "http://www.glassdoor.com/Reviews/workiva-reviews-SRCH_KE0,7.htm",
             "currentPageNumber": 1,
@@ -121,5 +121,5 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Tue, 07 Nov 2017 04:10:02 GMT
+  recorded_at: Tue, 07 Nov 2017 21:04:48 GMT
 recorded_with: VCR 3.0.3
