@@ -29,6 +29,7 @@ gem 'bootstrap-social-rails'
 gem 'bootstrap_form'
 gem 'newrelic_rpm'
 gem 'will_paginate'
+gem 'travis'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
