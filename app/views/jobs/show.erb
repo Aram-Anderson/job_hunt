@@ -7,30 +7,29 @@
     <div class="col-2">
       <%= image_tag @company.square_logo, width: "180em" %>
     </div>
-    <li class="col-4">
+    <div class="col-4">
       <p><%= link_to "#{@company.name}'s website", "https://#{@company.website}" %></p>
       <p>Industry: <%= @company.industry %></p>
       <p>Status: <%= @job.status.name %></p>
       <p><%= link_to "Edit Job", edit_job_path(@job) %></p>
       <p><%= link_to "Delete Job", job_path(@job), method: 'delete' %></p>
-        <p>Contacts:</p>
-        <% @job.contacts.each do |contact| %>
-        <ul>
-          <li><%= link_to contact.name, edit_job_contact_path(@job, contact) %></li>
-          <li><%= contact.phone %></li>
-          <li><%= contact.email %></li>
-          <%= link_to "delete contact", job_contact_path(@job, contact), method: 'delete' %>
-        </ul>
-        <% end %>
-        <%= link_to "Add Contact", new_job_contact_path(@job) %>
+      <p>Contacts:</p>
+      <% @job.contacts.each do |contact| %>
+      <ul>
+        <li><%= link_to contact.name, edit_job_contact_path(@job, contact) %></li>
+        <li><%= contact.phone %></li>
+        <li><%= contact.email %></li>
+        <%= link_to "delete contact", job_contact_path(@job, contact), method: 'delete' %>
+      </ul>
+      <% end %>
+      <%= link_to "Add Contact", new_job_contact_path(@job) %>
     </div>
+
     <div class="col-6">
       <p>Description:</p>
       <p><%= @job.description %></p><br>
     </div>
   </div>
-</div>
-
 <div class="card">
   <div class="container mb-5">
     <div class="row">
