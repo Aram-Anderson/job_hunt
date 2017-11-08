@@ -24,6 +24,6 @@ class JobsController < ApplicationController
 
   def job_params
     params.require(:job).permit(:company, :title, :city, :state,
-      :salary, :post_url, :status_id)
+      :salary, :description, :post_url, :status_id)
     end
   end
