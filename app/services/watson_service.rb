@@ -1,3 +1,4 @@
+
 class WatsonService
 
   def initialize
@@ -15,7 +16,7 @@ class WatsonService
   attr_reader :conn
 
   def get_response(description)
-    conn.get("/natural-language-understanding/api/v1/analyze?version=2017-02-27&text=#{description}&features=keywords&return_analyzed_text=false&clean=true&fallback_to_raw=true&concepts.limit=30&emotion.document=true&entities.limit=50&entities.emotion=true&entities.sentiment=true&keywords.limit=10&keywords.emotion=false&keywords.sentiment=false&relations.model=en-news&semantic_roles.limit=50&semantic_roles.entities=false&semantic_roles.keywords=false&sentiment.document=false").body
+    conn.get("/natural-language-understanding/api/v1/analyze?version=2017-02-27&text=#{URI.escape(description)}&features=keywords&return_analyzed_text=false&clean=true&fallback_to_raw=true&concepts.limit=30&emotion.document=false&entities.limit=50&entities.emotion=false&entities.sentiment=false&keywords.limit=9&keywords.emotion=false&keywords.sentiment=false&relations.model=en-news&semantic_roles.limit=50&semantic_roles.entities=false&semantic_roles.keywords=false&sentiment.document=true").body
   end
 
   def parse_response(raw_response)
