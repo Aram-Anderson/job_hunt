@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6">
+      <div class="card new-job">
+        <div class="container">
+          <h3 class="card-header">Add a Contact</h3>
+          <div class-"card-block">
+            <%= bootstrap_form_for([:job, @contact]) do |f| %>
+            <% if @contact.errors.any? %>
+            <h3><%= pluralize(@contact.errors.count, "error") %> prohibited this record from being saved:</h3>
+            <ul>
+              <% @contact.errors.full_messages.each do |message| %>
+              <li>
+                <%= message %>
+              </li>
+              <% end %>
+            </ul>
+            <% end %>
+            <%= f.text_field :name %>
+            <%= f.text_field :phone %>
+            <%= f.text_field :email %>
+            <%= f.text_field :image_url %>
+
+            <%= f.submit "Add Contact", class: "btn-success" %>
+            <% end %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
