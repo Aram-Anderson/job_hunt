@@ -6,5 +6,6 @@ RSpec.describe Status, type: :model do
 
     expect(status).to respond_to(:name)
   end
+  it { should validate_presence_of(:name) }
   it { should have_many(:jobs) }
 end

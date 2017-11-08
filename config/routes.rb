@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   resources :dashboard, only: [:index]
   resources :jobs do
-    resources :contacts
+    resources :contacts, except: [:index, :show]
+    resources :checklists, except: [:index, :show]
   end
   resources :companies, only: [:show]
 end

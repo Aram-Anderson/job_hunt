@@ -44,3 +44,18 @@
     </div><br>
   </div>
 </div>
+<div class="card">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12">
+        <center><p>Checklist tasks for this job:</p></center>
+      </div>
+      <% @job.checklists.each do |checklist| %>
+      <div class="col-4">
+        <p><%= checklist.task %>,  <%= link_to "done!", job_checklist_path(@job), method: 'delete' %></p>
+      </div>
+      <% end %>
+      <%= link_to "Add Task", new_job_checklist_path(@job) %>
+    </div><br>
+  </div>
+</div>

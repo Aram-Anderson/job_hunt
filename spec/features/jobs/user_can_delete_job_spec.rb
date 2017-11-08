@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature "As a logged in user" do
-  context "I can add a new job" do
-    scenario "when I visit '/job/:id/edit'" do
+  context "I can delete a job" do
+    scenario "when I visit '/job/:id' and click delete, the job is deleted" do
       VCR.use_cassette('job delete') do
         user = create(:user)
         job = create(:job, user: user, company: "Workiva")
