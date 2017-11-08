@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :dashboard, only: [:index]
   resources :jobs do
-    resources :contacts, only: [:new, :create, :edit, :update, :delete]
+    resources :contacts
   end
   resources :companies, only: [:show]
 end

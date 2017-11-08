@@ -5,24 +5,39 @@ class ContactsController < ApplicationController
   end
 
   def create
-    contact = Contact.new(contact_params)
+    job = current_user.jobs.find(params[:job_id])
+    contact = job.contacts.create(contact_params)
     if contact.save
-      flash[:notice] = "Contact"
+      flash[:notice] = "Contact added!"
     end
+    redirect_to job_path(job)
   end
 
   def edit
-    @contact = Contact.find(params[:id])
+    job = Job.find(params[:job_id])
+    @contact = job.contacts.find(params[:id])
   end
 
   def update
-    contact = Contact.find(params[:id])
+    job = current_user.jobs.find(params[:job_id])
+    contact = job.contacts.find(params[:id])
     if contact.update(contact_params)
       flash[:notice] = "Contact successfully updated!"
     else
       flash[:notice] = "Unable to update contact. Try again."
     end
-    redirect_to job_path(contact.job)
+    redirect_to job_path(job)
+  end
+
+  def destroy
+    job = current_user.jobs.find(params[:job_id])
+    contact = job.contacts.find(params[:id])
+    if contact.delete
+      flash[:notice] = "#{contact.name} successfully deleted"
+    else
+      flash[:notice] = "There was a problem deleting this contact. Please try again"
+    end
+    redirect_to job_path(job)
   end
 
   private

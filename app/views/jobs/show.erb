@@ -20,8 +20,10 @@
           <li><%= link_to contact.name, edit_job_contact_path(@job, contact) %></li>
           <li><%= contact.phone %></li>
           <li><%= contact.email %></li>
+          <%= link_to "delete contact", job_contact_path(@job, contact), method: 'delete' %>
         </ul>
         <% end %>
+        <%= link_to "Add Contact", new_job_contact_path(@job) %>
     </div>
     <div class="col-6">
       <p>Description:</p>

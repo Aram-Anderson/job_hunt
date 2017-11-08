@@ -1,7 +1,7 @@
 class Job < ApplicationRecord
   belongs_to :user
   belongs_to :status
-  has_many :contacts
+  has_many :contacts, dependent: :destroy
 
   validates :company, :title, :city, :state, :salary, presence: true
 
