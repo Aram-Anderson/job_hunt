@@ -10,7 +10,7 @@ module OmniauthMacros
         "last_name"=>"Tester",
         "location"=>
         {"country"=>{"code"=>"us"}, "name"=>"Greater Denver Area"},
-        "description"=>"A real person",
+        "description"=>"A real person, for real",
         "image"=>
         "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi_-umMx6bXAhVBw2MKHazmBKgQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc_V8ajsD9Ts&psig=AOvVaw0n_KWeoU9AJNvD-odfxQA0&ust=1509941101392153",
         "urls"=>{"public_profile"=>"https://www.linkedin.com/in/test"}},
