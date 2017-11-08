@@ -1,5 +1,13 @@
 language: ruby
 rvm:
- - 2.2
-
- -rspec
+ - 2.4.1
+script:
+- bundle exec rspec
+#run tests
+before_script:
+- bundle exec rake db:create
+#create the DB before running scripts
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+#run the migration to set up DB schema
+- bundle exec rake db:test:prepare
+#prepare test db
