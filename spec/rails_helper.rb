@@ -10,6 +10,8 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'database_cleaner'
 
+SimpleCov.minimum_coverage 95
+
 SimpleCov.start 'rails' do
   add_filter '/mailers/'
   add_filter '/channels/'
