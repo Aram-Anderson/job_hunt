@@ -1,3 +1,4 @@
+https://travis-ci.org/Aram-Anderson/job_hunt.svg?branch=master
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/Aram-Anderson/job_hunt.svg?columns=all)](https://waffle.io/Aram-Anderson/job_hunt)
 
 ### Job Search
