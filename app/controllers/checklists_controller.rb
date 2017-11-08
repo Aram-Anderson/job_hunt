@@ -10,18 +10,6 @@ class ChecklistsController < ApplicationController
     redirect_to job_path(job)
   end
 
-  def edit
-    job = current_user.jobs.find(params[:job_id])
-    @checklist = job.checklists.find(param[:id])
-  end
-
-  def update
-    job = current_user.jobs.find(params[:job_id])
-    checklist = job.checklists.find(param[:id])
-    checklist.update(checklist_params)
-    redirect_to job_path(job)
-  end
-
   def destroy
     job = current_user.jobs.find(params[:job_id])
     checklist = job.checklists.find(params[:id])

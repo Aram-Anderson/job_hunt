@@ -23,4 +23,7 @@ user.jobs.create!(company: "United Launch Alliance", title: "Software Engineer",
 
 Job.all.each do |job|
   job.contacts.create(name: Faker::Name.name, phone: Faker::PhoneNumber.cell_phone, email: Faker::Internet.email, image_url: "http://lorempixel.com/200/200")
+  5.times do
+    job.checklists.create(task: LiterateRandomizer.sentence)
+  end
 end

@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="card">
   <h1>Job Details</h1>
 
   <p><%= @job.title %> at <%= @company.name %></p>
@@ -30,6 +31,7 @@
       <p><%= @job.description %></p><br>
     </div>
   </div>
+</div>
 <div class="card">
   <div class="container mb-5">
     <div class="row">
@@ -52,7 +54,7 @@
       </div>
       <% @job.checklists.each do |checklist| %>
       <div class="col-4">
-        <p><%= checklist.task %>,  <%= link_to "done!", job_checklist_path(@job), method: 'delete' %></p>
+        <p><%= checklist.task %>  <%= link_to "Delete, I'm done!", job_checklist_path(@job, checklist), method: 'delete' %></p>
       </div>
       <% end %>
       <%= link_to "Add Task", new_job_checklist_path(@job) %>
