@@ -15,4 +15,8 @@ RSpec.describe User, type: :model do
     expect(user.name).to eq("Bill Smith")
   end
   it { should have_many(:jobs) }
+  it { should validate_presence_of(:first_name) }
+  it { should validate_presence_of(:last_name) }
+  it { should validate_presence_of(:email) }
+  it { should validate_presence_of(:image_url) }
 end

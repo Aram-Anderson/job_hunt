@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6">
+      <div class="card new-job">
+        <div class="container">
+          <h3 class="card-header">Add a Job</h3>
+          <div class-"card-block">
+            <%= bootstrap_form_for([:job, @checklist]) do |f| %>
+            <% if @checklist.errors.any? %>
+            <h3><%= pluralize(@checklist.errors.count, "error") %> prohibited this record from being saved:</h3>
+            <ul>
+              <% @checklist.errors.full_messages.each do |message| %>
+              <li>
+                <%= message %>
+              </li>
+              <% end %>
+            </ul>
+            <% end %>
+            <%= f.text_field :task %>
+
+            <%= f.submit "Add Task", class: "btn-success" %>
+            <% end %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>

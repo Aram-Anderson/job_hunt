@@ -2,6 +2,8 @@ class User < ApplicationRecord
 
   has_many :jobs
 
+  validates :uid, :first_name, :last_name, :email, :token, :expires_at, :image_url, presence: true
+
   def self.from_omniauth(auth_info)
     where(uid: auth_info[:uid]).first_or_create do |new_user|
       new_user.uid         = auth_info["uid"]

@@ -1,12 +1,12 @@
 <div class="container">
+  <div class="card">
   <h1>Job Details</h1>
 
   <p><%= @job.title %> at <%= @company.name %></p>
 
   <div class="row">
     <div class="col-2">
-      <%= image_tag @company.square_logo %>
-
+      <%= image_tag @company.square_logo, width: "180em" %>
     </div>
     <div class="col-4">
       <p><%= link_to "#{@company.name}'s website", "https://#{@company.website}" %></p>
@@ -14,24 +14,24 @@
       <p>Status: <%= @job.status.name %></p>
       <p><%= link_to "Edit Job", edit_job_path(@job) %></p>
       <p><%= link_to "Delete Job", job_path(@job), method: 'delete' %></p>
-        <p>Contacts:</p>
-        <% @job.contacts.each do |contact| %>
-        <ul>
-          <li><%= link_to contact.name, edit_job_contact_path(@job, contact) %></li>
-          <li><%= contact.phone %></li>
-          <li><%= contact.email %></li>
-          <%= link_to "delete contact", job_contact_path(@job, contact), method: 'delete' %>
-        </ul>
-        <% end %>
-        <%= link_to "Add Contact", new_job_contact_path(@job) %>
+      <p>Contacts:</p>
+      <% @job.contacts.each do |contact| %>
+      <ul>
+        <li><%= link_to contact.name, edit_job_contact_path(@job, contact) %></li>
+        <li><%= contact.phone %></li>
+        <li><%= contact.email %></li>
+        <%= link_to "delete contact", job_contact_path(@job, contact), method: 'delete' %>
+      </ul>
+      <% end %>
+      <%= link_to "Add Contact", new_job_contact_path(@job) %>
     </div>
+
     <div class="col-6">
       <p>Description:</p>
       <p><%= @job.description %></p><br>
     </div>
   </div>
 </div>
-
 <div class="card">
   <div class="container mb-5">
     <div class="row">
@@ -43,6 +43,21 @@
         <p><%= keyword.word %>, relevance <%= keyword.relevance %></p>
       </div>
       <% end %>
+    </div><br>
+  </div>
+</div>
+<div class="card">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12">
+        <center><p>Checklist tasks for this job:</p></center>
+      </div>
+      <% @job.checklists.each do |checklist| %>
+      <div class="col-4">
+        <p><%= checklist.task %>  <%= link_to "Delete, I'm done!", job_checklist_path(@job, checklist), method: 'delete' %></p>
+      </div>
+      <% end %>
+      <%= link_to "Add Task", new_job_checklist_path(@job) %>
     </div><br>
   </div>
 </div>

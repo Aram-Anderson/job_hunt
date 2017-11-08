@@ -10,6 +10,7 @@ feature "As a logged in user" do
 
       fill_in "job[company]", with: "Company1"
       fill_in "job[title]", with: "Job Title"
+      fill_in "job[description]", with: "Do things at the place."
       fill_in "job[city]", with: "Denver"
       fill_in "job[state]", with: "CO"
       fill_in "job[post_url]", with: "job.com"
