@@ -1,6 +1,9 @@
 language: ruby
 rvm:
  - 2.4.1
+ test:
+  adapter: postgresql
+  database: job_hunt_test
 script:
 - bundle exec rspec
 #run tests
